@@ -78,7 +78,7 @@ Pair *searchTreeMap(TreeMap *tree, void *key) {
 
     if (comp == NULL) {
       tree->current = current;
-      return current->key;
+      return current->pair;
     }
   }
   return NULL;
