@@ -105,7 +105,11 @@ TreeNode *minimum(TreeNode *x) {
   return x;
 }
 
-void removeNode(TreeMap *tree, TreeNode *node) {}
+void removeNode(TreeMap *tree, TreeNode *node) {
+  // sin hijos
+
+  if (node->left == NULL || node->right == NULL)
+}
 
 void eraseTreeMap(TreeMap *tree, void *key) {
   if (tree == NULL || tree->root == NULL)

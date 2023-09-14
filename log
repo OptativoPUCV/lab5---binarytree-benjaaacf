@@ -284,3 +284,13 @@ Thu 14 Sep 2023 06:39:34 PM UTC:
  tests:  15|4
 total_score: 25/70
 0d68245
+Thu 14 Sep 2023 06:41:54 PM UTC: 
+ treemap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:112:1: error: expected expression before ‘}’ token
+  112 | }
+      | ^
+Compilation failed
+f1c96b4
