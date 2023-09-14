@@ -112,3 +112,20 @@ Thu 14 Sep 2023 01:29:28 AM UTC:
  tests:  4|7
 total_score: 5/70
 d8d31b4
+Thu 14 Sep 2023 01:41:53 AM UTC: 
+ treemap.c | 17 ++++++++++++++++-
+ 1 file changed, 16 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘searchTreeMap’:
+treemap.c:79:14: error: comparison between pointer and integer [-Werror]
+   79 |     if (comp == NULL) {
+      |              ^~
+treemap.c:81:21: error: ‘TreeNode’ has no member named ‘key’
+   81 |       return current->key;
+      |                     ^~
+treemap.c:84:1: error: control reaches end of non-void function [-Werror=return-type]
+   84 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+3e6e0f3
