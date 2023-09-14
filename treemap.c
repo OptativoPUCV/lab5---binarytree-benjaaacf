@@ -138,12 +138,13 @@ Pair *searchTreeMap(TreeMap *tree, void *key) {
 
       comp = is_equal(tree, tree->current->pair->key, key);
     }
-
-    return tree->current->pair;
   }
 
-  Pair *upperBound(TreeMap * tree, void *key) { return NULL; }
+  return tree->current->pair;
+}
 
-  Pair *firstTreeMap(TreeMap * tree) { return NULL; }
+Pair *upperBound(TreeMap *tree, void *key) { return NULL; }
 
-  Pair *nextTreeMap(TreeMap * tree) { return NULL; }
+Pair *firstTreeMap(TreeMap *tree) { return NULL; }
+
+Pair *nextTreeMap(TreeMap *tree) { return NULL; }
