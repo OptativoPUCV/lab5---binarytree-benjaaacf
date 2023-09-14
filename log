@@ -62,3 +62,33 @@ test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
 cc1: all warnings being treated as errors
 Compilation failed
 15b3d03
+Thu 14 Sep 2023 01:26:45 AM UTC: 
+ treemap.c | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:41:53: error: expected ‘)’ before ‘;’ token
+   41 |   TreeMap * map = (TreeMap *) malloc(sizeof(TreeMap);
+      |                                     ~               ^
+      |                                                     )
+treemap.c:52:1: error: expected ‘,’ or ‘;’ before ‘}’ token
+   52 | }
+      | ^
+test.c:503:5: error: ‘main’ is normally a non-static function [-Werror=main]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+test.c:606:1: error: expected declaration or statement at end of input
+  606 | }
+      | ^
+In file included from test.c:4:
+treemap.c:41:13: error: unused variable ‘map’ [-Werror=unused-variable]
+   41 |   TreeMap * map = (TreeMap *) malloc(sizeof(TreeMap);
+      |             ^~~
+test.c:607: error: control reaches end of non-void function [-Werror=return-type]
+At top level:
+test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
+  503 | int main( int argc, char *argv[] ) {
+      |     ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+442e118
