@@ -135,9 +135,9 @@ Pair *searchTreeMap(TreeMap *tree, void *key) {
       }
 
       tree->current = tree->current->left;
-
-      comp = is_equal(tree, tree->current->pair->key, key);
     }
+
+    comp = is_equal(tree, tree->current->pair->key, key);
   }
 
   return tree->current->pair;
