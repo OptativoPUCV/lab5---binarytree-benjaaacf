@@ -92,3 +92,17 @@ test.c:503:5: error: ‘main’ defined but not used [-Werror=unused-function]
 cc1: all warnings being treated as errors
 Compilation failed
 442e118
+Thu 14 Sep 2023 01:27:23 AM UTC: 
+ treemap.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘createTreeMap’:
+treemap.c:46:13: error: assignment to ‘TreeNode *’ from incompatible pointer type ‘int (*)(void *, void *)’ [-Werror=incompatible-pointer-types]
+   46 |   map->root = lower_than;
+      |             ^
+treemap.c:47:16: error: assignment to ‘TreeNode *’ from incompatible pointer type ‘int (*)(void *, void *)’ [-Werror=incompatible-pointer-types]
+   47 |   map->current = lower_than;
+      |                ^
+cc1: all warnings being treated as errors
+Compilation failed
+c0c5606

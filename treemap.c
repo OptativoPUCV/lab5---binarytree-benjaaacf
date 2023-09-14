@@ -38,15 +38,14 @@ TreeNode *createTreeNode(void *key, void *value) {
 
 // new->lower_than = lower_than;
 TreeMap *createTreeMap(int (*lower_than)(void *key1, void *key2)) {
-  TreeMap * map = (TreeMap *) malloc(sizeof(TreeMap);
-  if(map == NULL)
-  {
+  TreeMap *map = (TreeMap *)malloc(sizeof(TreeMap));
+  if (map == NULL) {
     return NULL;
   }
 
-  map -> root = lower_than;
-  map -> current = lower_than;
-  map -> lower_than = lower_than;
+  map->root = lower_than;
+  map->current = lower_than;
+  map->lower_than = lower_than;
 
   return map;
 }
