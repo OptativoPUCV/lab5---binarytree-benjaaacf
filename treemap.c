@@ -84,11 +84,11 @@ Pair *searchTreeMap(TreeMap *tree, void *key) {
     } else if (comp < 0) {
       current = current->left;
     } else {
-      current = current	->right;
+      current = current->right;
     }
   }
 
-  // tree -> current = NULL;
+  tree->current = NULL;
   return NULL;
 }
 
