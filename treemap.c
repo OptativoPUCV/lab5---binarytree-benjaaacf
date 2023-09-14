@@ -72,23 +72,23 @@ Pair *searchTreeMap(TreeMap *tree, void *key) {
     return NULL;
   }
 
-  TreeNode *current = tree->root;
+  TreeNode *node = tree->root;
 
-  while (current != NULL) {
+  while (node != NULL) {
 
-    int comp = tree->lower_than(key, current->pair->key);
+    int comp = tree->lower_than(key, node->pair->key);
 
     if (comp == 0) {
-      tree->current = current;
-      return current->pair;
+      tree->current = node;
+      return node->pair;
     } else if (comp < 0) {
-      current = current->left;
+      node = node->left;
     } else {
-      current = current->right;
+      node = node->right;
     }
   }
-  
-  tree -> current = NULL;
+
+  // tree -> current = NULL;
   return NULL;
 }
 
