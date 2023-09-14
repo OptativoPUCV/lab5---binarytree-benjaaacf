@@ -69,20 +69,11 @@ void insertTreeMap(TreeMap *tree, void *key, void *value) {
 
     int comp = tree->lower_than(key, current->pair->key);
 
-    if (comp == 0) {
+    if (comp < 0) {
 
-      free(nNode->pair);
-      free(nNode);
+      current = current->left;
     } else {
-
-      parent = current;
-
-      if (comp < 0) {
-        current = current->left;
-      } else {
-
-        current = current->right;
-      }
+      current = current->right;
     }
   }
 
