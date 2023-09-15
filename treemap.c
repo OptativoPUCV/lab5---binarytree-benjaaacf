@@ -202,6 +202,8 @@ Pair *firstTreeMap(TreeMap *tree) {
   if (tree->current == NULL) {
     return NULL;
   }
+
+  return tree->current->pair;
 }
 
 Pair *nextTreeMap(TreeMap *tree) { return NULL; }
