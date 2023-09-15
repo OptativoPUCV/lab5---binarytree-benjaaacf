@@ -194,7 +194,14 @@ Pair *searchTreeMap(TreeMap *tree, void *key) {
   return tree->current->pair;
 }
 
-Pair *upperBound(TreeMap *tree, void *key) { return NULL; }
+Pair *upperBound(TreeMap *tree, void *key) {
+  tree->current = tree->root;
+  TreeNode *uNode = NULL;
+
+  while (1) {
+    if (tree->lower_than(tree->current))
+  }
+}
 
 Pair *firstTreeMap(TreeMap *tree) {
   TreeNode *x = tree->root;
