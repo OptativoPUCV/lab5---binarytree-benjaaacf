@@ -203,6 +203,19 @@ Pair *upperBound(TreeMap *tree, void *key) {
       if (tree->current->right == NULL) {
         break;
       }
+
+      tree->current = tree->current->right;
+      continue;
+    }
+
+    if (tree->lower_than(tree->current->pair->key, key) == 0) {
+      if (tree->current->left == NULL) {
+        break;
+      }
+
+      tree->current = tree->current->left;
+      uNode = tree->current->parent;
+      continue;
     }
   }
 }
