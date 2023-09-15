@@ -218,6 +218,16 @@ Pair *upperBound(TreeMap *tree, void *key) {
       continue;
     }
   }
+
+  if (tree->lower_than(tree->current->pair->key, key) == 1 && uNode != NULL) {
+    return uNode->pair;
+  }
+
+  if (uNode == NULL) {
+    return NULL;
+  }
+
+  return tree->current->pair;
 }
 
 Pair *firstTreeMap(TreeMap *tree) {
